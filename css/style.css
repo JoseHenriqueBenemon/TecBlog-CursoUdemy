@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* define grid area */
+#header{
+    grid-area: header;
+}
+#section{
+    grid-area: section;
+}
+#aside{
+    grid-area: aside;
+}
+#footer{
+    grid-area: footer;
+}
+
+#main{
+    display: grid;
+    grid-template-areas:
+      'header header header header header header header header header header'
+      'section aside aside aside aside aside aside aside aside aside'
+      'footer footer footer footer footer footer footer footer footer footer';
+    gap: 10px;
+}
+#main > div#section{
+    margin-left: 220px;
+}
+
+#main > div#aside{
+    margin-right: 220px;
+}
+
+#main > div#footer{
+    margin: 0 220px;
+}
+
+/* header and navbar */
+#header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #f4ca16;
+    padding: 20px;
+    height: 80px;
+}
+h1#titulo{
+    color: #fff;
+    font-size: 35px;
+}
+h1 tom{
+    color: #575757;
+}
+#navbar{
+    margin-top: 10px;
+}
+
+#navbar a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px;
+}
+
+/* content (section and aside) */
+div.postagens{
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+div.postagens h3{
+    color: #f4ca16;
+}
+
+div.postagens a{
+    text-decoration: none;
+    color: #fdff00;
+}
+
+div.conteudo-aside{
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+div.conteudo-aside h5{
+    background-color: #e9e9e9;
+    color: #808080;
+    padding: 3px;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+div.conteudo-aside a{
+    display: block;
+    text-decoration: none;
+    color: #fdff00;
+    padding-bottom: 4px;
+}
+
+/* footer */
+#footer{
+    background-color: #fff;
+    text-align: center;
+}
